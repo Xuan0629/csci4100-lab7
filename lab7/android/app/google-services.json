@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112514048399",
+    "project_id": "lab7-ecaec",
+    "storage_bucket": "lab7-ecaec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112514048399:android:35dcff93acd49327a32bfa",
+        "android_client_info": {
+          "package_name": "com.example.lab7"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9HCAdTzpkN0cWxvj4MiU6uFx3Rd4Yw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
