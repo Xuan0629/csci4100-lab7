@@ -8,7 +8,7 @@ Future<void> main() async {
   await Firebase.initializeApp( options: DefaultFirebaseOptions.currentPlatform, );
   runApp(const MyApp());
 }
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
   const MyApp({Key? key}) : super(key: key); // corrected here
 
   @override

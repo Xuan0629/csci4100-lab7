@@ -76,8 +76,13 @@ class _ListGradesState extends State<ListGrades> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           }
+          if (!snapshot.hasData) {
+            return Center(child: Text('No grades found.'));
+          }
 
+          // Convert the QuerySnapshot to a list of Grade objects
           final grades = snapshot.data!.docs.map((doc) => Grade.fromDocumentSnapshot(doc)).toList();
+
 
           return ListView.builder(
             itemCount: grades.length,

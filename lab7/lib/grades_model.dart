@@ -5,13 +5,17 @@ class GradesModel {
   // Firestore collection reference
   final CollectionReference collection = FirebaseFirestore.instance.collection('grades');
 
-  static var instance;
+  // static var instance;
+  static final GradesModel _instance = GradesModel._privateConstructor();
+  static GradesModel get instance => _instance;
 
-  // Fetch all grades as a stream for real-time updates
-  Stream<List<Grade>> get allGradesStream {
-    return collection.snapshots().map((snapshot) {
-      return snapshot.docs.map((doc) => Grade.fromDocumentSnapshot(doc)).toList();
-    });
+  GradesModel._privateConstructor() {
+    // Perform initializations if necessary
+  }
+
+  // Fetch all grades as a stream of QuerySnapshot for real-time updates
+  Stream<QuerySnapshot> get allGradesStream {
+    return collection.snapshots();
   }
 
   // Insert a grade
